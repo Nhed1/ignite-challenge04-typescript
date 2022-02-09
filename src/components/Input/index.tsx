@@ -1,10 +1,16 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  InputHTMLAttributes,
+} from "react";
 
 import { useField } from "@unform/core";
 import { Container } from "./styles";
 import { IconBaseProps } from "react-icons";
 
-interface inputProps {
+interface inputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   icon?: React.ComponentType<IconBaseProps>;
 }
