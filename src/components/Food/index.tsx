@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Container } from "./styles";
 import api from "../../services/api";
 
-interface foodProps {
+export interface FoodProps {
   food: {
     id: number;
     name: string;
@@ -16,7 +16,7 @@ interface foodProps {
   available: boolean;
 }
 
-function Food({ food, handleEditFood, handleDelete, available }: foodProps) {
+function Food({ food, handleEditFood, handleDelete, available }: FoodProps) {
   const [isAvailable, setIsAvailable] = useState(available);
 
   const toggleAvailable = async () => {
